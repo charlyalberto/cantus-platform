@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
@@ -24,26 +25,27 @@ from-slate-100 to-blue-100 flex items-center justify-center">
         </div>
 
      <div className="mt-10 flex justify-center">
-  <button
-    className="flex items-center justify-center gap-2
-               bg-[#173F9A] hover:bg-[#0F2D73]
-               text-white font-bold
-               px-8 py-4
-               rounded-xl
-               shadow-lg
-               transition-all duration-300
-               hover:scale-105
-               hover:shadow-2xl
-               group
-               cursor-pointer"
-  >
-    <span>Acessar Plataforma</span>
+<Link
+  href="/login"
+  className="mt-10 flex items-center justify-center gap-2
+             bg-[#173F9A] hover:bg-[#0F2D73]
+             text-white font-bold
+             px-8 py-4
+             rounded-xl
+             shadow-lg
+             transition-all duration-300
+             hover:scale-105
+             hover:shadow-2xl
+             group
+             cursor-pointer"
+>
+  <span>Acessar Plataforma</span>
 
-    <ArrowRight
-      size={20}
-      className="transition-transform duration-300 group-hover:translate-x-1"
-    />
-  </button>
+  <ArrowRight
+    size={20}
+    className="transition-transform duration-300 group-hover:translate-x-1"
+  />
+</Link>
 </div>
 
         <p className="mt-8 text-gray-400 text-sm">
