@@ -4,11 +4,20 @@ import LoginForm from "./LoginForm";
 
 export default function LoginCard() {
   return (
-    <Card className="w-full max-w-6xl overflow-hidden">
+    <Card className="w-full max-w-7xl overflow-hidden">
 
       <div className="grid md:grid-cols-2">
 
-        <div className="bg-[#173F9A] text-white p-16 flex flex-col justify-center">
+        <div className="
+                bg-gradient-to-br
+                from-[#1D4ED8]
+                to-[#173F9A]
+                text-white
+                p-16
+                flex
+                flex-col
+                justify-center
+                ">
 
           <Logo />
 

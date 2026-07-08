@@ -2,8 +2,19 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br
-from-slate-100 to-blue-100 flex items-center justify-center">
+    <main
+  className="
+    min-h-screen
+    bg-gradient-to-br
+    from-slate-100
+    via-blue-50
+    to-slate-200
+    flex
+    items-center
+    justify-center
+    p-6
+  "
+>
       <div className="bg-white shadow-2xl rounded-3xl p-12 w-full max-w-[650px] text-center">
 
         <div className="text-6xl mb-8">🎼</div>
