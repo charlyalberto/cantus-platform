@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Home,
   Users,
@@ -7,6 +9,7 @@ import {
   BarChart3,
   Settings,
   LogOut,
+  ClipboardCheck,
 } from "lucide-react";
 
 import SidebarItem from "./SidebarItem";
@@ -25,14 +28,9 @@ export default function Sidebar() {
       "
     >
       {/* Logo */}
-
       <div className="border-b border-slate-200 p-8">
-
         <div className="text-center">
-
-          <div className="text-5xl">
-            🎼
-          </div>
+          <div className="text-5xl">🎼</div>
 
           <h1 className="mt-4 text-3xl font-black tracking-wider text-[#173F9A]">
             CANTUS
@@ -43,31 +41,53 @@ export default function Sidebar() {
             <br />
             de Gestão Coral
           </p>
-
         </div>
-
       </div>
 
       {/* Menu */}
 
-      <nav className="flex-1 space-y-2 p-4">
+      <nav className="flex-1 overflow-y-auto p-4">
 
-            <SidebarItem
+  {/* Geral */}
+
+  <div className="mb-6">
+
+    <p className="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+      Geral
+    </p>
+
+    <div className="space-y-2">
+
+      <SidebarItem
         icon={Home}
         label="Dashboard"
         href="/dashboard"
       />
 
       <SidebarItem
+        icon={ClipboardCheck}
+        label="Chamada"
+        href="/chamada"
+      />
+
+    </div>
+
+  </div>
+
+  {/* Gestão */}
+
+  <div className="mb-6">
+
+    <p className="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+      Gestão
+    </p>
+
+    <div className="space-y-2">
+
+      <SidebarItem
         icon={Users}
         label="Coralistas"
         href="/coralistas"
-      />
-
-      <SidebarItem
-        icon={Music}
-        label="Repertório"
-        href="/repertorio"
       />
 
       <SidebarItem
@@ -77,10 +97,30 @@ export default function Sidebar() {
       />
 
       <SidebarItem
+        icon={Music}
+        label="Repertório"
+        href="/repertorio"
+      />
+
+      <SidebarItem
         icon={Presentation}
         label="Apresentações"
         href="/eventos"
       />
+
+    </div>
+
+  </div>
+
+  {/* Análises */}
+
+  <div className="mb-6">
+
+    <p className="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+      Análises
+    </p>
+
+    <div className="space-y-2">
 
       <SidebarItem
         icon={BarChart3}
@@ -88,38 +128,31 @@ export default function Sidebar() {
         href="/relatorios"
       />
 
+    </div>
+
+  </div>
+
+  {/* Sistema */}
+
+  <div>
+
+    <p className="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+      Sistema
+    </p>
+
+    <div className="space-y-2">
+
       <SidebarItem
         icon={Settings}
         label="Configurações"
         href="/configuracoes"
       />
 
-      </nav>
+    </div>
 
-      {/* Usuário */}
+  </div>
 
-      <div className="border-t border-slate-200 p-6">
-
-        <div className="mb-5">
-
-          <p className="font-semibold">
-            Charly Alberto
-          </p>
-
-          <p className="text-sm text-slate-500">
-            Administrador
-          </p>
-
-        </div>
-
-        <SidebarItem
-          icon={LogOut}
-          label="Sair"
-          href="#"
-        />
-
-      </div>
-
+</nav>
     </aside>
   );
 }
