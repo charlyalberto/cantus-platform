@@ -86,7 +86,7 @@ export default function Sidebar() {
 
       <SidebarItem
         icon={Users}
-        label="Coralistas"
+        label="Coristas"
         href="/coralistas"
       />
 
