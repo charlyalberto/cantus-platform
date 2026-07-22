@@ -1,12 +1,10 @@
 type CoralistaStatusProps = {
-  status: "Ativo" | "Inativo";
+  ativo: boolean;
 };
 
 export default function CoralistaStatus({
-  status,
+  ativo,
 }: CoralistaStatusProps) {
-  const active = status === "Ativo";
-
   return (
     <span
       className={`
@@ -19,7 +17,7 @@ export default function CoralistaStatus({
         font-semibold
 
         ${
-          active
+          ativo
             ? "bg-green-100 text-green-700"
             : "bg-red-100 text-red-700"
         }
@@ -33,14 +31,14 @@ export default function CoralistaStatus({
           rounded-full
 
           ${
-            active
+            ativo
               ? "bg-green-600"
               : "bg-red-600"
           }
         `}
       />
 
-      {status}
+      {ativo ? "Ativo" : "Inativo"}
     </span>
   );
 }

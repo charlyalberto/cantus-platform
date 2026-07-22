@@ -11,7 +11,7 @@ export default function CoralistaContact({
     <div className="flex items-center gap-2 text-slate-600">
 
       <Phone
-        size={16}
+        size={14}
         className="text-slate-400"
       />
 

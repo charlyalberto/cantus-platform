@@ -1,17 +1,17 @@
-export type StatusCoralista =
-  | "Ativo"
-  | "Inativo";
-
 export type Naipe =
-  | "Soprano"
-  | "Contralto"
-  | "Tenor"
-  | "Baixo";
+  | "SOPRANO"
+  | "CONTRALTO"
+  | "TENOR"
+  | "BAIXO";
 
 export type Coralista = {
-  id: number;
+  id: string;
   nome: string;
+  telefone: string | null;
+  email: string | null;
+  dataNascimento: string | null;
   naipe: Naipe;
-  telefone: string;
-  status: StatusCoralista;
+  ativo: boolean;
+  createdAt: string;
+  updatedAt: string;
 };
