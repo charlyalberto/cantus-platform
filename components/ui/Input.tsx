@@ -8,6 +8,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
     return (
       <input
+        ref={ref}
         type={type}
         className={cn(
           "flex h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm text-slate-900",
@@ -20,7 +21,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           "disabled:cursor-not-allowed disabled:opacity-50",
           className
         )}
-        ref={ref}
         {...props}
       />
     );

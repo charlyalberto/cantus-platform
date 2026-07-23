@@ -2,6 +2,7 @@ import DashboardPanel from "@/components/dashboard/DashboardPanel";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import WelcomeBanner from "@/components/dashboard/WelcomeBanner";
 import PageHeader from "@/components/layout/PageHeader";
+import { getDashboard } from "@/lib/api/dashboard";
 
 import {
   Users,
@@ -10,11 +11,13 @@ import {
   Presentation,
 } from "lucide-react";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const dashboard = await getDashboard();
+
   const stats = [
     {
       title: "Coralistas",
-      value: 120,
+      value: dashboard.cards.coralistas,
       icon: Users,
     },
     {
@@ -82,9 +85,7 @@ export default function DashboardPage() {
         <DashboardPanel title="Últimas Atividades">
           <div className="space-y-4">
             <p>✅ João Silva foi cadastrado.</p>
-
             <p>🎵 Novo repertório adicionado.</p>
-
             <p>📅 Ensaio confirmado para sábado.</p>
           </div>
         </DashboardPanel>
